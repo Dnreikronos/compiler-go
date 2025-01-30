@@ -10,3 +10,7 @@ const (
 	Divide   TokenType = "/"
 	EOF      TokenType = "EOF"
 )
+type Token struct {
+	Type  TokenType
+	Value string
+}
