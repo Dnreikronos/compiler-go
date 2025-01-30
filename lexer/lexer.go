@@ -1,6 +1,7 @@
 package lexer
 
 type TokenType string
+
 const (
 	Number   TokenType = "Number"
 	Plus     TokenType = "+"
