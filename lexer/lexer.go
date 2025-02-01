@@ -1,5 +1,7 @@
 package lexer
 
+import "strings"
+
 type TokenType string
 
 const (
