@@ -1,6 +1,10 @@
 package lexer
 
 import "strings"
+import (
+	"strings"
+	"unicode"
+)
 
 type TokenType string
 
