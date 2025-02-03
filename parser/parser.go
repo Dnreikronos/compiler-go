@@ -1,0 +1,3 @@
+type Expr interface {
+	exprNode()
+}
