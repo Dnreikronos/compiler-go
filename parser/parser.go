@@ -11,3 +11,9 @@ type BinaryExpr struct {
 	Op    lexer.TokenType
 	Right Expr
 }
+func (b BinaryExpr) exprNode() {}
+
+type Parser struct {
+	tokens []lexer.Token
+	pos    int
+}
