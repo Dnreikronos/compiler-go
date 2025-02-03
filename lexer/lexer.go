@@ -1,6 +1,5 @@
 package lexer
 
-import "strings"
 import (
 	"strings"
 	"unicode"
@@ -16,6 +15,7 @@ const (
 	Divide   TokenType = "/"
 	EOF      TokenType = "EOF"
 )
+
 type Token struct {
 	Type  TokenType
 	Value string
@@ -51,4 +51,19 @@ func Lex(input string) []Token {
 	}
 
 	return tokens
+}
+
+func readNumber(r *strings.Reader) string {
+	var num strings.Builder
+	for {
+		ch, _, err := r.ReadRune()
+		if err != nil || !unicode.IsDigit(ch) {
+			if err == nil {
+				r.UnreadRune()
+			}
+			break
+		}
+		num.WriteRune(ch)
+	}
+	return num.String()
 }
