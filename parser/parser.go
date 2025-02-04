@@ -33,3 +33,18 @@ func (p *Parser) Parse() Expr {
 func (p *Parser) parseExpr() Expr {
 	return p.parseTerm()
 }
+func (p *Parser) parseTerm() Expr {
+	left := p.parseFactor()
+
+	for {
+		if p.match(lexer.Plus, lexer.Minus) {
+			op := p.previous().Type
+			right := p.parseFactor()
+			left = BinaryExpr{Left: left, Op: op, Right: right}
+		} else {
+			break
+		}
+	}
+
+	return left
+}
