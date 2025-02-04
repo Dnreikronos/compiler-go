@@ -24,3 +24,6 @@ type Parser struct {
 	tokens []lexer.Token
 	pos    int
 }
+func NewParser(tokens []lexer.Token) *Parser {
+	return &Parser{tokens: tokens}
+}
