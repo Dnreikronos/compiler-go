@@ -24,15 +24,19 @@ type Parser struct {
 	tokens []lexer.Token
 	pos    int
 }
+
 func NewParser(tokens []lexer.Token) *Parser {
 	return &Parser{tokens: tokens}
 }
+
 func (p *Parser) Parse() Expr {
 	return p.parseExpr()
 }
+
 func (p *Parser) parseExpr() Expr {
 	return p.parseTerm()
 }
+
 func (p *Parser) parseTerm() Expr {
 	left := p.parseFactor()
 
