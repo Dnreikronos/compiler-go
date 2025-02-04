@@ -30,3 +30,6 @@ func NewParser(tokens []lexer.Token) *Parser {
 func (p *Parser) Parse() Expr {
 	return p.parseExpr()
 }
+func (p *Parser) parseExpr() Expr {
+	return p.parseTerm()
+}
