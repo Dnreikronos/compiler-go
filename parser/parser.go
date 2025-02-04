@@ -27,3 +27,6 @@ type Parser struct {
 func NewParser(tokens []lexer.Token) *Parser {
 	return &Parser{tokens: tokens}
 }
+func (p *Parser) Parse() Expr {
+	return p.parseExpr()
+}
