@@ -45,6 +45,8 @@ func (p *Parser) parseTerm() Expr {
 			break
 		}
 	}
+	return left
+}
 
 	return left
 }
