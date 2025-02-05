@@ -85,3 +85,6 @@ func (p *Parser) peek() lexer.Token {
 	return p.tokens[p.pos]
 }
 
+func (p *Parser) previous() lexer.Token {
+	return p.tokens[p.pos-1]
+}
