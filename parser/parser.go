@@ -24,6 +24,7 @@ type Parser struct {
 	tokens []lexer.Token
 	pos    int
 }
+
 func NewParser(tokens []lexer.Token) *Parser {
 	return &Parser{tokens: tokens}
 }
@@ -62,6 +63,7 @@ func (p *Parser) parseFactor() Expr {
 	}
 	return left
 }
+
 func (p *Parser) parsePrimary() Expr {
 	if p.match(lexer.Number) {
 		return NumberExpr{Value: p.previous().Value}
@@ -78,6 +80,7 @@ func (p *Parser) match(types ...lexer.TokenType) bool {
 	}
 	return false
 }
+
 func (p *Parser) peek() lexer.Token {
 	if p.pos >= len(p.tokens) {
 		return lexer.Token{Type: lexer.EOF}
