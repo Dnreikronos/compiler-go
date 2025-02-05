@@ -78,3 +78,10 @@ func (p *Parser) match(types ...lexer.TokenType) bool {
 	}
 	return false
 }
+func (p *Parser) peek() lexer.Token {
+	if p.pos >= len(p.tokens) {
+		return lexer.Token{Type: lexer.EOF}
+	}
+	return p.tokens[p.pos]
+}
+
