@@ -62,3 +62,9 @@ func (p *Parser) parseFactor() Expr {
 	}
 	return left
 }
+func (p *Parser) parsePrimary() Expr {
+	if p.match(lexer.Number) {
+		return NumberExpr{Value: p.previous().Value}
+	}
+	panic("Unexpected token")
+}
