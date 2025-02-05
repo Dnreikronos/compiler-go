@@ -68,3 +68,13 @@ func (p *Parser) parsePrimary() Expr {
 	}
 	panic("Unexpected token")
 }
+
+func (p *Parser) match(types ...lexer.TokenType) bool {
+	for _, t := range types {
+		if p.peek().Type == t {
+			p.pos++
+			return true
+		}
+	}
+	return false
+}
