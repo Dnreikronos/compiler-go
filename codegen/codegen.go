@@ -1,3 +1,11 @@
+package codegen
+
+import (
+	"fmt"
+
+	"github.com/Dnreikronos/compiler-go/parser"
+)
+
 func Generate(expr parser.Expr) string {
 	output := ".global_start\n"
 	output += "_start:\n"
@@ -7,6 +15,7 @@ func Generate(expr parser.Expr) string {
 	output += "		syscall\n"
 	return output
 }
+
 func traverse(expr parser.Expr) string {
 	switch e := expr.(type) {
 	case parser.NumberExpr:
