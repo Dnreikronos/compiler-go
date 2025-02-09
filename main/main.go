@@ -9,6 +9,7 @@ import (
 	"github.com/Dnreikronos/compiler-go/lexer"
 	"github.com/Dnreikronos/compiler-go/parser"
 )
+
 func main() {
 	input := "1 + 2 * 3"
 
