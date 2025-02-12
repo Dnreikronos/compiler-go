@@ -13,12 +13,12 @@ This project is a simple compiler for arithmetic expressions written in Golang. 
 ## Project Structure
 
 compiler-go/
-├── lexer/        # Lexical analysis (tokenizer)
-├── parser/       # Parsing logic
-├── codegen/      # Code generation
-├── main.go       # Entry point of the compiler
-├── output.s      # Generated assembly file
-├── output        # Compiled binary
+├── lexer/        # Lexical analysis (tokenizer) <br>
+├── parser/       # Parsing logic <br>
+├── codegen/      # Code generation <br>
+├── main.go       # Entry point of the compiler <br>
+├── output.s      # Generated assembly file <br>
+├── output        # Compiled binary <br>
 
 
 ## Installation
