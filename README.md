@@ -12,7 +12,7 @@ This project is a simple compiler for arithmetic expressions written in Golang. 
 
 ## Project Structure
 
-compiler-go/
+compiler-go/ <br>
 ├── lexer/        # Lexical analysis (tokenizer) <br>
 ├── parser/       # Parsing logic <br>
 ├── codegen/      # Code generation <br>
